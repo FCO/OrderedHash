@@ -1,7 +1,7 @@
-unit role OrderedHash[::Type = Any, :@keys = flat("0".."9", "a".."z")] does Associative;
+unit role OrderedHash[\Type = Any, :@keys = flat("0".."9", "a".."z")] does Associative;
 has Mu:U    $!of    = Type;
 has Str     @!keys  = @keys;
-has Type    @!values;
+has         @!values is default(Type);
 has UInt    %!map   = @keys.kv.reverse;
 
 method STORE(*@pairs, :$initialize --> OrderedHash:D) {
@@ -12,6 +12,8 @@ method STORE(*@pairs, :$initialize --> OrderedHash:D) {
 }
 
 method !index(Str() \key where any @!keys --> UInt) { %!map{key} }
+
+method elems { self.keys.elems }
 
 method keys { @!keys.grep: { self{$_}:exists } }
 

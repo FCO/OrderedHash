@@ -8,11 +8,15 @@ is %oh.keys, ();
 
 is %oh.values, ();
 
+is %oh.elems, 0;
+
 is (%oh<c> = 42), 42;
 
 is %oh.keys, <c>;
 
 is %oh.values, (42);
+
+is %oh.elems, 1;
 
 is (%oh<c> = ^10), ^10;
 
@@ -23,6 +27,8 @@ is (%oh<b> = {:1a}), {:1a};
 is %oh.keys, <b c>;
 
 is %oh.values, ({:1a}, ^10);
+
+lives-ok {%oh<a> // 10};
 
 throws-like { %oh<d> = 1 }, X::TypeCheck::Binding::Parameter;
 

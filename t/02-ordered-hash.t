@@ -42,4 +42,8 @@ is %oh2.kv, <2 1 3 2 1 3>;
 
 is %oh2.pairs, (2 => 1, 3 => 2, 1 => 3);
 
+my %oh3 does OrderedHash[Int];
+
+dies-ok {%oh3<error> = "string"};
+
 done-testing

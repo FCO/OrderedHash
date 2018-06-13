@@ -1,7 +1,7 @@
-unit role OrderedHash[\Type = Any, :@keys = flat("0".."9", "a".."z")] does Associative;
+unit role OrderedHash[::T \Type = Any, :@keys = flat("0".."9", "A".."Z", "a".."z")] does Associative;
 has Mu:U    $!of    = Type;
 has Str     @!keys  = @keys;
-has         @!values is default(Type);
+has T       @!values is default(Type);
 has UInt    %!map   = @keys.kv.reverse;
 
 method STORE(*@pairs, :$initialize --> OrderedHash:D) {

@@ -21,6 +21,8 @@ method values { @!values.grep: { .DEFINITE } }
 
 method pairs { self.keys Z[=>] self.values }
 
+method list { self.keys Z[=>] self.values }
+
 method kv { flat self.keys Z[,] self.values }
 
 method Hash(--> Hash()) { self.pairs }

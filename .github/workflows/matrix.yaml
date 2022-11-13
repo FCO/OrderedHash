@@ -12,8 +12,16 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
+          - macos-latest
+          - windows-latest
         raku-version:
           - "2022.07"
+          - "2022.06"
+          - "2022.04"
+          - "2022.03"
+          - "2022.02"
+          - "2021.12"
+          - "2021.10"
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3

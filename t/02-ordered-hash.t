@@ -41,6 +41,7 @@ is %oh2.values, <1 2 3>;
 is %oh2.kv, <2 1 3 2 1 3>;
 
 is %oh2.pairs, (2 => 1, 3 => 2, 1 => 3);
+is %oh2.list, (2 => 1, 3 => 2, 1 => 3);
 
 my %oh3 does OrderedHash[Int];
 

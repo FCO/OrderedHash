@@ -1,6 +1,7 @@
 Revision history for OrderedHash
 
 {{$NEXT}}
+    - Fix bugs
 
 0.0.3  2022-11-13T12:59:52Z
     - Add list method to make it work with JSON::Fast

@@ -1,6 +1,8 @@
 Revision history for OrderedHash
 
 {{$NEXT}}
+
+0.0.4  2023-11-20T20:39:26Z
     - Fix bugs
 
 0.0.3  2022-11-13T12:59:52Z
